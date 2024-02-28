@@ -76,3 +76,12 @@ button:hover {
     background-position: center;
     z-index: -1;
 }
+
+#footer {
+    background-color: rgb(38, 41, 108); 
+    box-sizing: border-box; 
+    clear: both; 
+    display: block; 
+    color: white;
+    font-family: 'Kode Mono', monospace;
+}
