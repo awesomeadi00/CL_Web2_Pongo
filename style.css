@@ -10,6 +10,33 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    z-index: 9999;
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #000;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(50px);
+    }
+}
+
+.snowflake {
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .homeBackgroundImage {
@@ -36,11 +63,28 @@ html {
 
 .homeText h1 {
     font-size: 7rem;
-    background: linear-gradient(to right, #57c7ff, #5d60ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulsateGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulsateGlow {
+    0% {
+        color: #57c7ff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(173, 216, 230, 0.5);
+    }
+
+    50% {
+        color: #5d60ff;
+        text-shadow: 0 0 10px rgba(173, 216, 230, 0.7), 0 0 15px rgba(173, 216, 230, 0.5);
+    }
+
+    100% {
+        color: #57c7ff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(173, 216, 230, 0.5);
+    }
 }
 
 button {

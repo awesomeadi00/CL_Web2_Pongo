@@ -82,3 +82,34 @@ var mySwiper = new Swiper('.mySwiper', {
     // Speed of the transition between slides
     speed: 400,
 });
+
+// This is for generation of snowflakes
+const maxSnowflakes = 100;      // Maximum number of snowflakes
+const snowflakes = [];          // Array to store the snowflake elements
+
+// Generates max number of snowflakes by creating the div elements 
+function initializeSnowflakes() {
+    for (let i = 0; i < maxSnowflakes; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        resetSnowflake(snowflake);
+        document.body.appendChild(snowflake);
+        snowflakes.push(snowflake);
+
+        // Instead of removing the snowflake, reset it
+        snowflake.addEventListener('animationend', function () {
+            resetSnowflake(snowflake);
+        });
+    }
+}
+
+function resetSnowflake(snowflake) {
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Between 2 and 5 seconds
+    snowflake.style.opacity = Math.random();
+    snowflake.style.width = snowflake.style.height = Math.random() * 10 + 5 + 'px'; // Size between 5px and 15px
+    snowflake.style.top = -Math.random() * 20 + 'px'; 
+}
+
+// Initialize snowflakes on page load
+document.addEventListener('DOMContentLoaded', initializeSnowflakes);
