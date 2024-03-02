@@ -103,7 +103,21 @@ button:hover {
 
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
-    color: rgb(6, 214, 255);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    padding: 20px 30px;
+    z-index: 10;
+}
+
+.mySwiper .swiper-button-next {
+    right: 180px;
+}
+
+.mySwiper .swiper-button-prev {
+    left: 180px;
 }
 
 /* Footer CSS */
