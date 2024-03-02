@@ -23,3 +23,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function checkPagination(swiper) {
+    const totalSlides = swiper.slides.length - swiper.loopedSlides * 2; 
+    const currentIndex = swiper.realIndex + 1; // Ensuring human-based index counting
+    const nextButton = document.querySelector('.swiper-button-next');
+    const prevButton = document.querySelector('.swiper-button-prev');
+
+    // Hide the next button if it's the first page. 
+    if (currentIndex === 1) {
+        if (prevButton) prevButton.style.display = 'none';
+    } else {
+        if (prevButton) prevButton.style.display = 'block';
+    }
+
+    //Commented out for now so we can figure out the game mechanics...
+    // // If it's the minigame 8, remove the next button
+    // if (currentIndex === 8) {
+    //     if (nextButton) nextButton.style.display = 'none';
+    // } else {
+    //     if (nextButton) nextButton.style.display = 'block';
+    // }
+
+    // // If it's the minigame 12, remove the next button
+    // if (currentIndex === 12) {
+    //     if (nextButton) nextButton.style.display = 'none';
+    // } else {
+    //     if (nextButton) nextButton.style.display = 'block';
+    // }
+}
+
+// This feature is from the Swiping Library for Image Swiping Gallery
+var mySwiper = new Swiper('.mySwiper', {
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    on: {
+        init: function () {
+            checkPagination(this);
+        },
+        slideChange: function () {
+            checkPagination(this);
+        }
+    },
+
+    // Enable swiping with mouse and touch
+    simulateTouch: true,
+    touchRatio: 1,
+    grabCursor: true,
+    slideToClickedSlide: true,
+
+    // Speed of the transition between slides
+    speed: 400,
+});
