@@ -17,7 +17,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Images/Homepage_Background.png');
+    background-image: url('Images/Landingpage.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@ html {
 
 .homeText h1 {
     font-size: 7rem;
-    background: linear-gradient(to right, #0088cc, #ffffff);
+    background: linear-gradient(to right, #57c7ff, #5d60ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -48,20 +48,29 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 150px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Kode Mono', monospace;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #95c1f0;
 }
 
 .comicSection {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+
+.comicBackgroundImage
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .comicBackgroundImage {
@@ -78,7 +87,7 @@ button:hover {
 }
 
 #footer {
-    background-color: rgb(38, 41, 108); 
+    background-color: rgb(0, 0, 0); 
     box-sizing: border-box; 
     clear: both; 
     display: block; 
