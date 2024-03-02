@@ -23,3 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// This feature is from the Swiping Library for Image Swiping Gallery
+var mySwiper = new Swiper('.mySwiper', {
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Enable swiping with mouse and touch
+    simulateTouch: true,
+    touchRatio: 1,
+    grabCursor: true,
+    slideToClickedSlide: true,
+
+    // Speed of the transition between slides
+    speed: 400,
+});

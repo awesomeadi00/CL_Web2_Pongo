@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Pongo The Penguin</title>
 </head>
@@ -26,7 +28,42 @@
     <!-- This is where comic will be -->
     <div class="comicSection">
         <div class="comicBackgroundImage"></div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" style="margin-bottom: 20px;">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="Images/Panels/CoverPage.png" alt="Cover"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel1.png" alt="Panel 1"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel2.png" alt="Panel 2"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel3.png" alt="Panel 3"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel4.png" alt="Panel 4"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel5.png" alt="Panel 5"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel6.png" alt="Panel 6"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel7.png" alt="Panel 7"></div>
+
+                <div class="game">
+
+                </div>
+
+                <div class="swiper-slide"><img src="Images/Panels/Panel9.png" alt="Panel 9"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel10.png" alt="Panel 10"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel11.png" alt="Panel 11"></div>
+
+                <div class="game">
+
+                </div>
+
+                <div class="swiper-slide"><img src="Images/Panels/Panel13.PNG" alt="Panel 13"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel14.PNG" alt="Panel 14"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel15.PNG" alt="Panel 15"></div>
+                <div class="swiper-slide"><img src="Images/Panels/Panel16.PNG" alt="Panel 16"></div>
+            </div>
+        
+            <!--  Pagination -->
+            <div class="swiper-button-prev" style="z-index: 5;"></div>
+            <div class="swiper-button-next" style="z-index: 5;"></div>
+        </div>
     </div>
+    
     <script src="script.js"></script>
 
     <footer id="footer">
