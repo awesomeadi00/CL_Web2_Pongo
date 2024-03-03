@@ -22,6 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    // This is to check for p5js skecth information
+    window.addEventListener('message', function (event) {
+        console.log("Message event received");
+        console.log(event); // Log the entire event to inspect it
+        if (event.data && event.data.completed) {
+            console.log("Minigame completed!");
+        } else {
+            console.log("Received message:", event.data);
+        }
+    }, false);
 });
 
 function checkPagination(swiper) {
@@ -104,7 +116,7 @@ function initializeSnowflakes() {
 }
 
 function resetSnowflake(snowflake) {
-    const maxSnowflakeSize = 15;
+    const maxSnowflakeSize = 45;
     snowflake.style.left = Math.random() * (window.innerWidth - maxSnowflakeSize) + 'px';
     snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Between 2 and 5 seconds
     snowflake.style.opacity = Math.random();
@@ -114,13 +126,3 @@ function resetSnowflake(snowflake) {
 
 // Initialize snowflakes on page load
 document.addEventListener('DOMContentLoaded', initializeSnowflakes);
-
-
-// This is to check for p5js skecth information
-window.addEventListener('message', function (event) {
-    console.log("Message received:", event); 
-    if (event.data.completed) {
-        console.log("Minigame completed!");
-    }
-
-}, false);
