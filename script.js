@@ -74,7 +74,7 @@ var mySwiper = new Swiper('.mySwiper', {
     },
 
     // Enable swiping with mouse and touch
-    simulateTouch: true,
+    simulateTouch: false,
     touchRatio: 1,
     grabCursor: true,
     slideToClickedSlide: true,
@@ -104,7 +104,8 @@ function initializeSnowflakes() {
 }
 
 function resetSnowflake(snowflake) {
-    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    const maxSnowflakeSize = 15;
+    snowflake.style.left = Math.random() * (window.innerWidth - maxSnowflakeSize) + 'px';
     snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Between 2 and 5 seconds
     snowflake.style.opacity = Math.random();
     snowflake.style.width = snowflake.style.height = Math.random() * 10 + 5 + 'px'; // Size between 5px and 15px
@@ -113,3 +114,13 @@ function resetSnowflake(snowflake) {
 
 // Initialize snowflakes on page load
 document.addEventListener('DOMContentLoaded', initializeSnowflakes);
+
+
+// This is to check for p5js skecth information
+window.addEventListener('message', function (event) {
+    console.log("Message received:", event); 
+    if (event.data.completed) {
+        console.log("Minigame completed!");
+    }
+
+}, false);
