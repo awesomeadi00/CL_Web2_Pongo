@@ -9,18 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1f1a295127.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Pongo The Penguin</title>
 </head>
 
 <body>
+    <audio src="Sound/windwhistle.mp3" hidden loop></audio>
+    <button id="playButton"><i id="playIcon" class="fa-solid fa-volume-xmark"></i></button>
+    <audio src="Sound/pageflip.mp3" hidden></audio>
     <!-- This is the home section of the website -->
     <div class="homeSection">
         <div class="homeBackgroundImage"></div>
         <div class="homeText">
             <h1>Pongo The Penguin</h1>
             <a href=".comicSection">
-                <button>Read Now!</button>
+                <button id="readnowBtn">Read Now!</button>
             </a>
         </div>
     </div>

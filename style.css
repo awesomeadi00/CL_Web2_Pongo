@@ -39,6 +39,28 @@ html {
     animation-iteration-count: infinite;
 }
 
+#playButton {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: none;
+    z-index: 9999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playButton:hover {
+    background-color: #95c1f0;
+}
+
 .homeBackgroundImage {
     position: absolute;
     top: 0;
@@ -87,7 +109,7 @@ html {
     }
 }
 
-button {
+#readnowBtn {
     padding: 10px 20px;
     font-size: 1.5rem;
     background-color: #007bff;
@@ -129,6 +151,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 90%;
     background-image: url('Images/Comic_Background.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;

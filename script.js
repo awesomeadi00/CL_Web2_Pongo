@@ -126,3 +126,34 @@ function resetSnowflake(snowflake) {
 
 // Initialize snowflakes on page load
 document.addEventListener('DOMContentLoaded', initializeSnowflakes);
+
+// This is for the sounds
+const audio = document.querySelector('audio');
+
+playButton.addEventListener('click', function () {
+    if (audio.paused) {
+        audio.play();
+        playIcon.classList.remove('fa-volume-xmark');
+        playIcon.classList.add('fa-volume-off');
+    } else {
+        audio.pause();
+        playIcon.classList.remove('fa-volume-off');
+        playIcon.classList.add('fa-volume-xmark');
+    }
+});
+
+// Selecting the swiper buttons
+const prevButton = document.querySelector('.swiper-button-prev');
+const nextButton = document.querySelector('.swiper-button-next');
+
+// Selecting the audio element for the "pageflip" sound
+const pageflipAudio = document.querySelector('audio[src="Sound/pageflip.mp3"]');
+
+// Adding click event listeners to the swiper buttons
+prevButton.addEventListener('click', function () {
+    pageflipAudio.play();
+});
+
+nextButton.addEventListener('click', function () {
+    pageflipAudio.play();
+});
