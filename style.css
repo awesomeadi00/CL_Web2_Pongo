@@ -121,7 +121,7 @@ html {
     font-family: 'Kode Mono', monospace;
 }
 
-button:hover {
+#readnowBtn:hover {
     background-color: #95c1f0;
 }
 

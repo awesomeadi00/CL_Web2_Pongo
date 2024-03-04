@@ -116,7 +116,7 @@ function initializeSnowflakes() {
 }
 
 function resetSnowflake(snowflake) {
-    const maxSnowflakeSize = 55;
+    const maxSnowflakeSize = 100;
     snowflake.style.left = Math.random() * (window.innerWidth - maxSnowflakeSize) + 'px';
     snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Between 2 and 5 seconds
     snowflake.style.opacity = Math.random();
